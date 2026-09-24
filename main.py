@@ -22,3 +22,9 @@ async def hello():
     count = get_hit_count()
     return 'Hello World! I have been seen {} times.\n'.format(count)
 
+@app.get("/current")
+async def current():
+    current_count = cache.get('hits')
+    return f'Current number is {current_count}'
+
+
