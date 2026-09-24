@@ -1,0 +1,8 @@
+services:
+  fast-api:
+    # build: .
+    image: ${DOCKER_HUB}
+    ports:
+      - "9000:8000"
+  redis:
+    image: "redis:alpine"
